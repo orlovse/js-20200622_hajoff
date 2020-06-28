@@ -5,14 +5,8 @@
  * @returns {object} - returns the new object
  */
 export const pick = (obj, ...fields) => {
-  let arr = [...fields];
-  let newObj = {};
-  Object.keys(obj).map(key => {
-    arr.map(field => {
-      if (key === field) {
-        newObj[key] = obj[key]
-      }
-    });
-  });
+  const arr = [...fields];
+  const newObj = {};
+  arr.map(field => newObj[field] = obj[field]);
   return newObj;
 };

@@ -5,16 +5,10 @@
  * @returns {object} - returns the new object
  */
 export const omit = (obj, ...fields) => {
-  let arr = [...fields];
-  let newObj = {};
+  const arr = [...fields];
+  const newObj = {};
   Object.keys(obj).map(key => {
-    let counter = 0;
-    arr.map(field => {
-      if (key === field) {
-        counter++;
-      }
-    });
-    if (counter === 0) {
+    if (!arr.includes(obj[key])) {
       newObj[key] = obj[key];
     }
   });
