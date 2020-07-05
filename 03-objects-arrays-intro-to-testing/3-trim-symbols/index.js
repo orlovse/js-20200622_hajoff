@@ -22,4 +22,3 @@ export function trimSymbols(string, size) {
   });
   return arr.join('');
 }
-
