@@ -10,7 +10,7 @@ class Tooltip {
       this.render(element.dataset.tooltip);
       this.moveTooltip(event);
 
-      document.addEventListener('poinermove', this.onMouseMove);
+      document.addEventListener('pointermove', this.onMouseMove);
     }
   };
 
